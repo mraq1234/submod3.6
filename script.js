@@ -12,12 +12,12 @@ class Stopwatch {
         this.clearList = this.clearList.bind(this);
     }
 
-    start()  {
+    start() {
         if (!this.running) {
             this.running = true;
             this.watch = setInterval(() => this.step(), 10);
         }
-    };
+    }
 
     step() {
         if (!this.running) return;
@@ -79,17 +79,8 @@ class Stopwatch {
 const stopwatch = new Stopwatch(
     document.querySelector('.stopwatch'), document.getElementById('middleTimesPlace'));
 
-var startButton = document.getElementById('start');
-startButton.addEventListener('click', stopwatch.start);
-
-var stopButton = document.getElementById('stop');
-stopButton.addEventListener('click', stopwatch.stop);
-
-var startButton = document.getElementById('middle');
-startButton.addEventListener('click', stopwatch.middleTime);
-
-var stopButton = document.getElementById('reset');
-stopButton.addEventListener('click', stopwatch.reset);
-
-var stopButton = document.getElementById('clearList');
-stopButton.addEventListener('click', stopwatch.clearList);
+document.getElementById('start').addEventListener('click', stopwatch.start);
+document.getElementById('stop').addEventListener('click', stopwatch.stop);
+document.getElementById('middle').addEventListener('click', stopwatch.middleTime);
+document.getElementById('reset').addEventListener('click', stopwatch.reset);
+document.getElementById('clearList').addEventListener('click', stopwatch.clearList);

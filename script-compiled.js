@@ -104,17 +104,10 @@ var Stopwatch = function () {
 
 var stopwatch = new Stopwatch(document.querySelector('.stopwatch'), document.getElementById('middleTimesPlace'));
 
-var startButton = document.getElementById('start');
-startButton.addEventListener('click', stopwatch.start);
+document.getElementById('start').addEventListener('click', stopwatch.start);
+document.getElementById('stop').addEventListener('click', stopwatch.stop);
+document.getElementById('middle').addEventListener('click', stopwatch.middleTime);
+document.getElementById('reset').addEventListener('click', stopwatch.reset);
+document.getElementById('clearList').addEventListener('click', stopwatch.clearList);
 
-var stopButton = document.getElementById('stop');
-stopButton.addEventListener('click', stopwatch.stop);
-
-var startButton = document.getElementById('middle');
-startButton.addEventListener('click', stopwatch.middleTime);
-
-var stopButton = document.getElementById('reset');
-stopButton.addEventListener('click', stopwatch.reset);
-
-var stopButton = document.getElementById('clearList');
-stopButton.addEventListener('click', stopwatch.clearList);
+//# sourceMappingURL=script-compiled.js.map
